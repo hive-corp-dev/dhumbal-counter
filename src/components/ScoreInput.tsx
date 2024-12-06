@@ -7,7 +7,7 @@ type ScoreInputProps = {
 };
 
 const ScoreInput: React.FC<ScoreInputProps> = ({ players, onScoreSubmit }) => {
-  const [scores, setScores] = useState<string[]>(Array(players.length).fill(""));
+  const [scores, setScores] = useState<string[]>(Array(players.length).fill("0"));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const ScoreInput: React.FC<ScoreInputProps> = ({ players, onScoreSubmit }) => {
               <label className="w-32 font-medium text-gray-700">{player.name}</label>
               <input
                 type="number"
-                value={scores[index] || 0}
+                value={scores[index]}
                 onChange={(e) => {
                   const newScores = [...scores];
                   newScores[index] = e.target.value;
