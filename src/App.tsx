@@ -84,6 +84,13 @@ function App() {
               スコア: {getWinner()?.total}点
             </div>
             <ScoreHistory players={players} />
+
+            <a
+              href="/"
+              class="block w-full mt-6 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors"
+            >
+              もう一度プレイ
+            </a>
           </div>
         )}
       </div>
